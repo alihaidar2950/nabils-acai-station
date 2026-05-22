@@ -1,26 +1,145 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --acai: #3d1747;
+  --acai-deep: #1f0b25;
+  --acai-light: #7b4a8a;
+  --lavender: #d9c7e2;
+  --cream: #fbf5ec;
+  --cream-warm: #f1e6d2;
+  --honey: #f4b860;
+  --saffron: #ffb740;
+  --pistachio: #a6c36f;
+  --strawberry: #c9402e;
+  --cedar: #3c5e3a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html,
+body {
+  background: var(--cream);
+  color: var(--acai-deep);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+::selection {
+  background: var(--acai);
+  color: var(--cream);
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+/* Paper-grain overlay — tiny, almost invisible, adds warmth */
+.bg-grain {
+  background-image: radial-gradient(
+    rgba(31, 11, 37, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 3px 3px;
+}
+
+/* Sunburst rays from the bottom — lifted from Nabil's menu boards */
+.bg-sunburst-cream {
+  background-image: repeating-conic-gradient(
+    from 0deg at 50% 100%,
+    rgba(61, 23, 71, 0.05) 0deg,
+    rgba(61, 23, 71, 0.05) 6deg,
+    transparent 6deg,
+    transparent 12deg
+  );
+}
+
+.bg-sunburst-acai {
+  background-image: repeating-conic-gradient(
+    from 0deg at 50% 100%,
+    rgba(251, 245, 236, 0.08) 0deg,
+    rgba(251, 245, 236, 0.08) 6deg,
+    transparent 6deg,
+    transparent 12deg
+  );
+}
+
+/* Moorish arch — used for image frames and content blocks */
+.arch-top {
+  clip-path: path(
+    "M 0 100 L 0 200 Q 0 0 200 0 L 200 0 Q 400 0 400 200 L 400 100 Z"
+  );
+}
+
+/* Curly underline — echoes the menu board "CREPES" flourish */
+.flourish-underline {
+  position: relative;
+  display: inline-block;
+}
+.flourish-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.4em;
+  height: 0.5em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M2 8 Q 20 -2, 40 6 T 80 6 T 120 6 T 160 6 T 198 6' fill='none' stroke='%23F4B860' stroke-width='2.5' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Marquee strip — used on hero specials ticker */
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Rising entrance for hero copy */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: riseIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.rise-in-delay-1 {
+  animation-delay: 0.1s;
+}
+.rise-in-delay-2 {
+  animation-delay: 0.25s;
+}
+.rise-in-delay-3 {
+  animation-delay: 0.4s;
+}
+.rise-in-delay-4 {
+  animation-delay: 0.55s;
+}
+.rise-in-delay-5 {
+  animation-delay: 0.7s;
+}
+
+/* Decorative spinning sticker (the "open till 11" badge) */
+.spin-slow {
+  animation: spinSlow 28s linear infinite;
+}
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
 }

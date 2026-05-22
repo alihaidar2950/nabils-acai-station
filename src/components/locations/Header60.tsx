@@ -1,0 +1,35 @@
+"use client";
+
+import React from "react";
+
+export function Header60() {
+  return (
+    <section id="relume" className="relative px-[5%] py-16 md:py-24 lg:py-28">
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 items-start gap-x-12 gap-y-5 md:grid-cols-2 lg:gap-x-20 lg:gap-y-16">
+          <div>
+            <h1 className="text-6xl font-bold text-text-alternative md:text-9xl lg:text-10xl">
+              Find your nearest treat spot
+            </h1>
+          </div>
+          <div>
+            <p className="text-text-alternative md:text-md">
+              Urban Treats Collective has three locations across Sydney,
+              Melbourne, and Perth, each serving the same craveable menu with
+              the same premium care. Visit us today or order ahead for pickup
+              and delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          className="size-full object-cover"
+          alt="Relume placeholder image"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+    </section>
+  );
+}
