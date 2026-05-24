@@ -64,7 +64,7 @@ export function Heritage() {
               <div className="mt-10 aspect-[3/4] overflow-hidden rounded-[2rem_8rem_2rem_2rem] ring-1 ring-[var(--acai)]/15">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/ballajura-stall.jpg"
+                  src="/images/enhanced/location-ballajura-stall-v2.jpg"
                   alt="Nabil's Lebanese Sweets stall counter in Ballajura City Shopping Centre"
                   className="h-full w-full object-cover"
                 />

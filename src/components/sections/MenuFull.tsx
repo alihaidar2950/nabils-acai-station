@@ -63,7 +63,12 @@ export function MenuFull() {
           {menu.map((section, idx) => (
             <article
               key={section.title}
-              id={section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}
+              id={section.title
+                .normalize("NFD")
+                .replace(/[̀-ͯ]/g, "")
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/^-|-$/g, "")}
               className="scroll-mt-24"
             >
               <header className="flex flex-col gap-3 border-b border-[var(--acai)]/20 pb-5 md:flex-row md:items-end md:justify-between md:gap-8">

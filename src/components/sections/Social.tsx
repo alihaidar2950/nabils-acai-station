@@ -5,8 +5,8 @@ import { BiLogoInstagram, BiLogoTiktok } from "react-icons/bi";
 const tiles = [
   { src: "/images/enhanced/signature-dubai-strawberry-cup-v2.jpg", alt: "Dubai chocolate strawberry cup promo" },
   { src: "/images/enhanced/signature-build-your-own-acai-v2.jpg", alt: "Bueno açaí bowl on a blue backdrop" },
-  { src: "/images/menu-acai-board.jpg", alt: "Build-your-own açaí menu board" },
-  { src: "/images/customer-queue.jpg", alt: "Customers at the Mt Lawley counter" },
+  { src: "/images/enhanced/story-mt-lawley-interior.jpg", alt: "Mt Lawley dessert counter and neon interior" },
+  { src: "/images/enhanced/location-ballajura-stall-v2.jpg", alt: "Nabil's Lebanese Sweets counter in Ballajura" },
   { src: "/images/enhanced/signature-fruit-cocktails-v2.jpg", alt: "Four Nabil's mocktails in clear cans" },
   { src: "/images/enhanced/signature-matcha-bowl-v2.jpg", alt: "Matcha-drizzled açaí bowl" },
 ];

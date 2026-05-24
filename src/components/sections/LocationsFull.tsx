@@ -42,8 +42,8 @@ export function LocationsFull() {
                   <img
                     src={
                       idx === 0
-                        ? "/images/storefront-mt-lawley.jpg"
-                        : "/images/ballajura-stall.jpg"
+                        ? "/images/enhanced/location-mt-lawley-storefront-v2.jpg"
+                        : "/images/enhanced/location-ballajura-stall-v2.jpg"
                     }
                     alt={`${loc.name} storefront`}
                     className="absolute inset-0 h-full w-full object-cover"

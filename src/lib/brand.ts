@@ -89,26 +89,18 @@ export const signatures = [
     tag: "signature",
   },
   {
-    name: "Bueno Açaí Tower",
-    price: "from $15",
+    name: "Matcha Açaí Bowl",
+    price: "from $10",
     blurb:
-      "A tall swirl of açaí, Bueno drizzle, strawberries and banana. Built for the camera, better at the counter.",
-    image: "/images/enhanced/hero-bueno-editorial-v2.jpg",
-    tag: "new",
-  },
-  {
-    name: "Pistachio Delight Crêpe",
-    price: "$16",
-    blurb:
-      "Pistachio spread, crushed pistachio. Quiet flex. The Dubai chocolate's older sibling.",
+      "Açaí under a slow pour of matcha cream, fresh strawberries and banana. The calm cousin of the Bueno tower.",
     image: "/images/enhanced/signature-matcha-bowl-v2.jpg",
     tag: null,
   },
   {
-    name: "Waffle Snack Pack",
+    name: "Brownie Bowl",
     price: "$14",
     blurb:
-      "Warm waffles, strawberries, banana and your choice of drizzle. The afternoon-into-evening go-to.",
+      "Premium milk chocolate over warm brownie, with strawberries, banana and crushed Oreos. Built like dessert, eats like a bowl.",
     image: "/images/enhanced/signature-waffle-snack-pack-v2.jpg",
     tag: null,
   },
@@ -118,6 +110,14 @@ export const signatures = [
     blurb:
       "Avocado · Mango · Strawberry · Sunset Swirl · The Beast. Blended fresh with ashta, cashew and honey.",
     image: "/images/enhanced/signature-fruit-cocktails-v2.jpg",
+    tag: null,
+  },
+  {
+    name: "Lebanese Sweets",
+    price: "from $4",
+    blurb:
+      "Where Nabil's started — baklava, knafeh and the classics. Made in-house, still served at the Ballajura stall every day.",
+    image: "/images/enhanced/lebanese-sweets-display.jpg",
     tag: null,
   },
 ] as const;

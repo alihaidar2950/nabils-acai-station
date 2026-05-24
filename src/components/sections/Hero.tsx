@@ -59,27 +59,35 @@ export function Hero() {
               crunch, mocktails on tap. Made for sweet moments — open till late.
             </p>
 
-            <div className="mt-9 flex flex-wrap items-center gap-3 rise-in rise-in-delay-4">
+            <div className="mt-9 flex flex-wrap items-center gap-4 rise-in rise-in-delay-4">
+              {/* Primary CTA — hierarchical hero button */}
               <Link
                 href="/menu"
-                className="group inline-flex items-center gap-3 rounded-full bg-[var(--acai)] px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--cream)] shadow-[0_10px_30px_-12px_rgba(61,23,71,0.6)] transition-all hover:bg-[var(--acai-deep)] hover:translate-y-[-2px]"
+                className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[var(--acai)] px-9 py-5 text-[0.95rem] font-bold uppercase tracking-[0.18em] text-[var(--cream)] shadow-[0_18px_40px_-14px_rgba(61,23,71,0.7)] ring-1 ring-[var(--saffron)]/40 transition-all duration-300 hover:shadow-[0_22px_50px_-12px_rgba(61,23,71,0.85)] hover:-translate-y-0.5 hover:bg-[var(--acai-deep)]"
               >
-                View the menu
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">
+                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[var(--saffron)]/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                <span className="relative">View the menu</span>
+                <span
+                  aria-hidden
+                  className="relative inline-flex size-6 items-center justify-center rounded-full bg-[var(--saffron)] text-[var(--acai-deep)] transition-transform duration-300 group-hover:translate-x-1"
+                >
                   →
                 </span>
               </Link>
+
+              {/* Secondary — quieter */}
               <Link
                 href="/locations"
-                className="inline-flex items-center gap-3 rounded-full border border-[var(--acai)]/30 bg-[var(--cream)] px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--acai)] transition-colors hover:border-[var(--acai)] hover:bg-[var(--cream-warm)]"
+                className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--acai)] underline-offset-[6px] transition-colors hover:underline"
               >
                 Find a store
               </Link>
+              <span aria-hidden className="hidden h-4 w-px bg-[var(--acai)]/25 sm:inline-block" />
               <a
                 href={brand.phoneHref}
-                className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--acai)] underline-offset-[6px] hover:underline"
+                className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--acai)] underline-offset-[6px] transition-colors hover:underline"
               >
-                or call us
+                Call us
               </a>
             </div>
 
@@ -120,12 +128,15 @@ export function Hero() {
                 aria-hidden
                 className="absolute -inset-x-4 -bottom-4 top-12 rounded-[12rem_12rem_2rem_2rem] bg-[var(--lavender)]/40"
               />
-              {/* Decorative spinning sticker */}
+              {/* Animated mascot badge */}
               <div
-                aria-hidden
-                className="absolute -left-8 top-12 z-20 hidden h-28 w-28 items-center justify-center sm:flex"
+                className="absolute -left-3 top-7 z-20 flex h-24 w-24 items-center justify-center sm:-left-10 sm:top-10 sm:h-32 sm:w-32"
               >
-                <svg viewBox="0 0 100 100" className="spin-slow absolute inset-0">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="spin-slow absolute inset-0 drop-shadow-sm"
+                  aria-hidden
+                >
                   <defs>
                     <path
                       id="hero-circle"
@@ -144,7 +155,14 @@ export function Hero() {
                     </textPath>
                   </text>
                 </svg>
-                <Sparkle className="size-5 text-[var(--saffron)]" />
+                <div className="relative h-14 w-14 overflow-hidden rounded-full bg-[var(--cream)] shadow-[0_16px_30px_-18px_rgba(31,11,37,0.7)] ring-1 ring-[var(--acai)]/15 sm:h-20 sm:w-20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/enhanced/brand-mascot-medallion.jpg"
+                    alt="Nabil's chef mascot"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </div>
 
               {/* Arched image */}
@@ -153,7 +171,7 @@ export function Hero() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/enhanced/hero-bueno-editorial-v2.jpg"
+                  src="/images/enhanced/hero-bueno-editorial-v3.jpg"
                   alt="A tall Bueno-drizzled açaí bowl with banana and strawberries"
                   className="absolute inset-0 h-full w-full object-cover object-center"
                 />

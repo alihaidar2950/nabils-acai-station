@@ -21,7 +21,17 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[var(--acai)]/15 bg-[var(--cream)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10 lg:py-5">
-        <Wordmark size="md" />
+        <div className="flex items-center gap-5">
+          <Wordmark size="md" />
+          {/* Live open indicator */}
+          <div className="hidden items-center gap-1.5 rounded-full bg-[var(--cream-warm)] px-2.5 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-[var(--acai-deep)] md:inline-flex">
+            <span className="relative inline-flex">
+              <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-[var(--cedar)] opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--cedar)]" />
+            </span>
+            Open · till 11
+          </div>
+        </div>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 lg:flex">
@@ -58,10 +68,10 @@ export function Navbar() {
           </a>
           <Link
             href="/menu"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--acai)] px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--cream)] hover:bg-[var(--acai-deep)] transition-colors"
+            className="group inline-flex items-center gap-2 rounded-full bg-[var(--saffron)] px-4 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-[var(--acai-deep)] shadow-[0_8px_20px_-8px_rgba(255,183,64,0.7)] ring-1 ring-[var(--acai)]/10 transition-all hover:-translate-y-0.5 hover:bg-[var(--cream)]"
           >
             Order
-            <span aria-hidden>→</span>
+            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
           </Link>
           <button
             className="-mr-1 flex size-10 flex-col items-center justify-center lg:hidden"

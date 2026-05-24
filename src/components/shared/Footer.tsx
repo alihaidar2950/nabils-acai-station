@@ -60,11 +60,9 @@ export function Footer() {
               <address className="mt-3 not-italic text-sm leading-relaxed text-[var(--lavender)]">
                 {loc.address}
               </address>
-              {loc.hours && (
-                <div className="mt-3 text-sm text-[var(--lavender)]/80">
-                  Open daily till 10 – 11 PM
-                </div>
-              )}
+              <div className="mt-3 text-sm text-[var(--lavender)]/80">
+                {loc.hours ? "Open daily till 10 – 11 PM" : "Centre hours · Call for evenings"}
+              </div>
               <a
                 href={loc.mapsUrl}
                 target="_blank"

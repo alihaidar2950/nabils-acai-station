@@ -25,7 +25,27 @@ export function Reviews() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-7 md:grid-cols-3">
+        <div className="relative mt-14 grid grid-cols-1 gap-7 md:grid-cols-3">
+          {/* Polaroid — floats over the middle card on desktop, sits inline on mobile */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-0 z-20 hidden -translate-x-[60%] -translate-y-12 rotate-[-7deg] lg:block"
+          >
+            <div className="rounded-[1.25rem] bg-[var(--cream)] p-2.5 shadow-[0_24px_50px_-20px_rgba(31,11,37,0.5)] ring-1 ring-[var(--acai)]/10">
+              <div className="h-[12rem] w-[10rem] overflow-hidden rounded-lg">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/enhanced/hero-bueno-editorial-v3.jpg"
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="mt-2 px-1 pb-1 text-center font-display text-xs italic text-[var(--acai)]">
+                Bueno tower
+              </div>
+            </div>
+          </div>
+
           {reviews.map((r, idx) => (
             <figure
               key={r.author}
