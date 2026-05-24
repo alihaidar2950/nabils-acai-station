@@ -101,7 +101,7 @@ export const signatures = [
     price: "$14",
     blurb:
       "Premium milk chocolate over warm brownie, with strawberries, banana and crushed Oreos. Built like dessert, eats like a bowl.",
-    image: "/images/enhanced/signature-waffle-snack-pack-v2.jpg",
+    image: "/images/enhanced/signature-waffle-snack-pack.jpg",
     tag: null,
   },
   {

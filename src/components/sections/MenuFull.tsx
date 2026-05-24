@@ -2,6 +2,61 @@ import Link from "next/link";
 import { menu } from "@/lib/brand";
 import { Sparkle, PalmFrond } from "@/components/shared/Ornaments";
 
+const menuMedia = [
+  {
+    src: "/images/menu/acai-build-your-own.jpg",
+    alt: "A build-your-own acai bowl topped with banana, strawberries and a tall drizzle",
+  },
+  {
+    src: "/images/menu/classic-crepes.jpg",
+    alt: "A tray of crepes drizzled with sauce in front of the Nabil's logo",
+  },
+  {
+    src: "/images/menu/signature-crepes.jpg",
+    alt: "A close-up tray of Nabil's signature crepes with sauce",
+  },
+  {
+    src: "/images/menu/strawberry-cups.jpg",
+    alt: "A Dubai strawberry cup topped with chocolate and pistachio",
+  },
+  {
+    src: "/images/menu/dubai-chocolate.jpg",
+    alt: "Dubai chocolate acai promo with pistachio topping and strawberries",
+  },
+  {
+    src: "/images/menu/brownies.jpg",
+    alt: "A chocolate dessert bowl with strawberries, banana and brownie-style toppings",
+  },
+  {
+    src: "/images/menu/waffle-snack-pack.jpg",
+    alt: "A waffle snack pack tray with strawberries, banana and sauce",
+  },
+  {
+    src: "/images/menu/fruit-cocktails.jpg",
+    alt: "Nabil's fruit cocktails lined up on the Mt Lawley counter",
+  },
+  {
+    src: "/images/menu/matcha.jpg",
+    alt: "Nabil's matcha drinks beside a pistachio milk chocolate carton",
+  },
+  {
+    src: "/images/menu/mocktails.jpg",
+    alt: "A lineup of colorful Nabil's mocktails on the counter",
+  },
+  {
+    src: "/images/menu/iced-lattes.jpg",
+    alt: "Two layered iced lattes in branded Nabil's cans",
+  },
+  {
+    src: "/images/menu/milkshakes.jpg",
+    alt: "A blended drink on the counter below the Made for Sweet Moments neon",
+  },
+  {
+    src: "/images/menu/probiotic-splash.jpg",
+    alt: "Two chilled Nabil's probiotic splash cans on a pink wall ledge",
+  },
+] as const;
+
 export function MenuHero() {
   return (
     <section className="relative overflow-hidden bg-[var(--acai-deep)] text-[var(--cream)]">
@@ -71,6 +126,30 @@ export function MenuFull() {
                 .replace(/^-|-$/g, "")}
               className="scroll-mt-24"
             >
+              <div
+                className={`grid grid-cols-1 gap-7 lg:grid-cols-12 lg:items-start lg:gap-10 ${
+                  idx % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
+                }`}
+              >
+                <div className="lg:col-span-5">
+                  <div className="relative mx-auto aspect-[4/5] max-w-[30rem] overflow-hidden rounded-[1.5rem] bg-[var(--cream-warm)] ring-1 ring-[var(--acai)]/15 shadow-[0_24px_60px_-36px_rgba(31,11,37,0.45)]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={menuMedia[idx]?.src}
+                      alt={menuMedia[idx]?.alt ?? section.title}
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 ring-1 ring-inset ring-[var(--cream)]/35"
+                    />
+                    <div className="absolute bottom-4 left-4 rounded-full bg-[var(--cream)] px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--acai)] shadow-sm">
+                      {String(idx + 1).padStart(2, "0")}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7">
               <header className="flex flex-col gap-3 border-b border-[var(--acai)]/20 pb-5 md:flex-row md:items-end md:justify-between md:gap-8">
                 <div>
                   <div className="text-[0.7rem] uppercase tracking-[0.3em] text-[var(--acai)]/60">
@@ -117,6 +196,8 @@ export function MenuFull() {
                   {section.footnote}
                 </p>
               )}
+                </div>
+              </div>
             </article>
           ))}
         </div>
