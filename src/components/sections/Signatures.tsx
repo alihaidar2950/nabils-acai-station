@@ -51,27 +51,12 @@ export function Signatures() {
               }}
             >
               <div className="relative aspect-[4/5] overflow-hidden bg-[var(--cream-warm)]">
-                {"video" in item && item.video ? (
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    poster={item.image}
-                    aria-label={item.name}
-                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  >
-                    <source src={item.video} type="video/mp4" />
-                  </video>
-                ) : (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  />
-                )}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                />
                 {item.tag && (
                   <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-[var(--saffron)] px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[var(--acai-deep)]">
                     {item.tag === "viral" && (
