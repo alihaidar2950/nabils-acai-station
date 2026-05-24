@@ -66,13 +66,15 @@ export function Navbar() {
           >
             Call
           </a>
-          <Link
-            href="/menu"
+          <a
+            href={brand.orderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full bg-[var(--saffron)] px-4 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-[var(--acai-deep)] shadow-[0_8px_20px_-8px_rgba(255,183,64,0.7)] ring-1 ring-[var(--acai)]/10 transition-all hover:-translate-y-0.5 hover:bg-[var(--cream)]"
           >
             Order
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
-          </Link>
+          </a>
           <button
             className="-mr-1 flex size-10 flex-col items-center justify-center lg:hidden"
             onClick={() => setOpen((v) => !v)}

@@ -3,6 +3,8 @@ export const brand = {
   tagline: "Made for sweet moments.",
   phone: "+61 8 6285 5935",
   phoneHref: "tel:+61862855935",
+  orderUrl:
+    "https://www.ubereats.com/au/store/nabils-acai-station-nabils-lebanese-sweets-pty-ltd/B5xIbcLwW8ORip2Jj-A1sg",
   instagram: {
     handle: "@nabilsacaistation",
     url: "https://instagram.com/nabilsacaistation",
