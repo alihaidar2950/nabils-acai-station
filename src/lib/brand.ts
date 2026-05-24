@@ -109,7 +109,7 @@ export const signatures = [
     price: "$15",
     blurb:
       "Avocado · Mango · Strawberry · Sunset Swirl · The Beast. Blended fresh with ashta, cashew and honey.",
-    image: "/images/enhanced/signature-fruit-cocktails-v2.jpg",
+    image: "/images/enhanced/signature-fruit-cocktails-home.jpg",
     tag: null,
   },
   {
@@ -117,7 +117,7 @@ export const signatures = [
     price: "from $4",
     blurb:
       "Where Nabil's started — baklava, knafeh and the classics. Made in-house, still served at the Ballajura stall every day.",
-    image: "/images/enhanced/lebanese-sweets-display.jpg",
+    image: "/images/enhanced/lebanese-sweets-home-card.jpg",
     tag: null,
   },
 ] as const;
