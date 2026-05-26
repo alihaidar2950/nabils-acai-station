@@ -33,10 +33,10 @@ export function Heritage() {
               <p>
                 Nabil&rsquo;s started as a family Lebanese sweets counter —
                 baklava, knafeh, the works. When açaí bowls and Dubai chocolate
-                took over Perth&rsquo;s feeds, we did what every immigrant
-                family business does best: we got good at the new thing without
-                losing the old one. Same family, same kitchen — open till late
-                under a neon sign that reads{" "}
+                took over Perth&rsquo;s feeds, we followed the same family-run
+                instinct that built the sweets counter: get good at the new
+                thing without losing the old one. Same family, same kitchen —
+                open till late under a neon sign that reads{" "}
                 <em className="font-display not-italic">
                   &ldquo;Made for sweet moments&rdquo;
                 </em>
