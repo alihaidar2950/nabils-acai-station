@@ -12,7 +12,7 @@ const specials = [
   "Mocktails on Tap",
   "Bueno Crepe",
   "Sunset Swirl Cocktail",
-  "Brownie Bowl",
+  "Waffle Snack Pack",
   "Cookies & Cream Shake",
   "Ube Matcha",
 ];

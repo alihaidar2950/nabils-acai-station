@@ -88,18 +88,18 @@ export const signatures = [
     tag: "signature",
   },
   {
-    name: "Matcha Açaí Bowl",
+    name: "Pistachio Açaí Bowl",
     price: "from $10",
     blurb:
-      "Açaí under a slow pour of matcha cream, fresh strawberries and banana. The calm cousin of the Bueno tower.",
+      "Açaí under a slow pour of pistachio cream, fresh strawberries and banana. Nutty, glossy and built for pistachio lovers.",
     image: "/images/enhanced/signature-matcha-bowl-v2.jpg",
     tag: null,
   },
   {
-    name: "Brownie Bowl",
+    name: "Waffle Snack Pack",
     price: "$14",
     blurb:
-      "Premium milk chocolate over warm brownie, with strawberries, banana and crushed Oreos. Built like dessert, eats like a bowl.",
+      "Warm waffle pieces with strawberries, banana and your choice of drizzle. Built like dessert, easy to share.",
     image: "/images/enhanced/signature-waffle-snack-pack.jpg",
     tag: null,
   },
