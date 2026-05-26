@@ -33,7 +33,7 @@ const menuMedia = [
   },
   {
     src: "/images/menu/fruit-cocktails.jpg",
-    alt: "Nabil's fruit cocktails lined up on the Mt Lawley counter",
+    alt: "Nabil's fruit cocktails lined up on the counter",
   },
   {
     src: "/images/menu/matcha.jpg",

@@ -55,21 +55,18 @@ export const reviews = [
       "Everyone who works there is so sweet. The food is amazing and really worth the price.",
     author: "Emily Brown",
     badge: null,
-    location: "Mt Lawley",
   },
   {
     quote:
       "Best dessert and açaí in town. Keep up the good work Nabil and team. Loved it.",
     author: "Rakesh Jha",
     badge: "Local Guide",
-    location: "Mt Lawley",
   },
   {
     quote:
       "Strawberries were fresh, brownies were nice and warm, and the drink was really refreshing. Portions were good and everything tasted homemade. Place has a chill vibe too.",
     author: "Raina Aljorany",
     badge: "Local Guide",
-    location: "Mt Lawley",
   },
 ] as const;
 

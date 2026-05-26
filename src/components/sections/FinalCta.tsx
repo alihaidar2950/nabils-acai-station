@@ -29,9 +29,9 @@ export function FinalCta() {
               <span className="italic text-[var(--honey)]">eleven</span>.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--lavender)]">
-              Mt Lawley flagship every day of the week. Ballajura stall inside
-              the shopping centre. Order at the counter, takeaway, delivery -
-              or wait for a seat by the neon.
+              Open till late in Perth. Walk in for a seat by the neon, tap
+              order for delivery, or call ahead for pickup — whichever kind of
+              sweet moment you&rsquo;re after.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link
@@ -59,7 +59,7 @@ export function FinalCta() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/enhanced/signature-fruit-cocktails-v2.jpg"
-                  alt="Nabil's fruit cocktails on the Mt Lawley counter"
+                  alt="Nabil's fruit cocktails lined up on the counter"
                   className="h-full w-full object-cover"
                 />
               </div>

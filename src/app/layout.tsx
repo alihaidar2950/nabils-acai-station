@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     template: "%s · Nabil's Açaí Station",
   },
   description:
-    "Açaí bowls, crêpes, Dubai chocolate, viral strawberry cups, matcha and mocktails — made for sweet moments in Mount Lawley and Ballajura. Open late.",
+    "Açaí bowls, crêpes and Dubai chocolate in Perth. Made for sweet moments — open till late.",
   openGraph: {
     title: "Nabil's Açaí Station",
     description:
-      "Made for sweet moments. Açaí, crêpes and Dubai chocolate in Perth — Mt Lawley & Ballajura.",
+      "Açaí, crêpes and Dubai chocolate in Perth. Made for sweet moments.",
     type: "website",
     locale: "en_AU",
   },

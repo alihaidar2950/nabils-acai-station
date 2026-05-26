@@ -21,7 +21,7 @@ export function Reviews() {
           </div>
           <div className="flex items-center gap-3 text-sm text-[var(--acai-deep)]/75">
             <StarRating value={5} />
-            <span>5.0 across Mt Lawley · Google</span>
+            <span>5★ on Google · Perth</span>
           </div>
         </div>
 
@@ -75,9 +75,6 @@ export function Reviews() {
                       {r.badge}
                     </div>
                   )}
-                </div>
-                <div className="text-[0.65rem] uppercase tracking-[0.22em] text-[var(--acai)]/60">
-                  {r.location}
                 </div>
               </figcaption>
             </figure>

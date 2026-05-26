@@ -30,15 +30,11 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.7rem] uppercase tracking-[0.28em] text-[var(--acai)]/80 rise-in rise-in-delay-1">
           <span className="inline-flex items-center gap-1.5">
             <Sparkle className="size-2.5 text-[var(--saffron)]" />
-            Mt Lawley 5.0
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Sparkle className="size-2.5 text-[var(--saffron)]" />
-            Ballajura 4.5
+            Perth · Open till late
           </span>
           <span className="hidden sm:inline-flex items-center gap-1.5">
             <Sparkle className="size-2.5 text-[var(--saffron)]" />
-            Open till 11
+            5★ on Google
           </span>
         </div>
 
@@ -103,10 +99,10 @@ export function Hero() {
               </div>
               <div>
                 <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-[var(--acai)]/60">
-                  Perth shops
+                  Açaí toppings
                 </dt>
                 <dd className="mt-1.5 font-display text-2xl text-[var(--acai-deep)]">
-                  Two
+                  14
                 </dd>
               </div>
               <div>

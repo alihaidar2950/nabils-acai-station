@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Sparkle } from "@/components/shared/Ornaments";
 
-export function BlogComingSoon() {
+export function SpecialsComingSoon() {
   return (
     <section className="relative overflow-hidden bg-[var(--cream)]">
       <div
@@ -11,17 +11,16 @@ export function BlogComingSoon() {
       <div className="relative mx-auto max-w-3xl px-6 py-32 text-center md:py-40 lg:px-10">
         <div className="flex items-center justify-center gap-2 text-[0.7rem] uppercase tracking-[0.32em] text-[var(--acai)]/70">
           <Sparkle className="size-3 text-[var(--saffron)]" />
-          Coming soon
+          What&rsquo;s new
           <Sparkle className="size-3 text-[var(--saffron)]" />
         </div>
         <h1 className="mt-6 font-display text-5xl leading-[1.02] tracking-tight text-[var(--acai-deep)] md:text-7xl">
-          Stories from the <span className="italic">station</span>.
+          Specials, drops &amp; <span className="italic">limited runs</span>.
         </h1>
         <p className="mt-7 mx-auto max-w-xl text-base leading-relaxed text-[var(--acai-deep)]/75 md:text-lg">
-          We&rsquo;re putting together a few good ones — the kataifi
-          recipe debate, the night the Dubai chocolate sold out by 8 PM, the
-          first batch of pistachio matcha. In the meantime, the freshest
-          updates live on Instagram.
+          Dubai chocolate drops, seasonal flavours, pistachio matcha experiments,
+          one-off collabs. We&rsquo;re wiring this page up — for now, the freshest
+          updates land on Instagram first.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <a

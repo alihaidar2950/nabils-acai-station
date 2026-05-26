@@ -34,7 +34,8 @@ export function LocationsFull() {
           {locations.map((loc, idx) => (
             <article
               key={loc.slug}
-              className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14"
+              id={loc.slug}
+              className="grid scroll-mt-28 grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14"
             >
               <div className={`lg:col-span-6 ${idx === 1 ? "lg:order-2" : ""}`}>
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[10rem_10rem_2rem_2rem] ring-1 ring-[var(--acai)]/15 shadow-[0_30px_60px_-30px_rgba(31,11,37,0.35)]">
