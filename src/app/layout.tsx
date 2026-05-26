@@ -3,6 +3,7 @@ import { Baloo_2, Fredoka } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const baloo = Baloo_2({
   subsets: ["latin"],
@@ -49,6 +50,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
