@@ -148,12 +148,18 @@ export function Hero() {
                     style={{
                       fontFamily:
                         'var(--font-display), ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif',
-                      fontSize: "13px",
-                      letterSpacing: "0.32em",
+                      fontSize: "10.5px",
+                      letterSpacing: "0.06em",
                       textTransform: "uppercase",
+                      fontWeight: 700,
                     }}
                   >
-                    <textPath href="#hero-sticker-curve" startOffset="0">
+                    <textPath
+                      href="#hero-sticker-curve"
+                      startOffset="0"
+                      textLength="276"
+                      lengthAdjust="spacingAndGlyphs"
+                    >
                       Open till late · Made for sweet moments ·
                     </textPath>
                   </text>
