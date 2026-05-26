@@ -20,7 +20,8 @@ html,
 body {
   background: var(--cream);
   color: var(--acai-deep);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans), ui-rounded, system-ui, sans-serif;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,7 +32,36 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-family: var(--font-display), ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.tracking-tight {
+  letter-spacing: 0;
+}
+
+.brand-bubble-text {
+  font-family: var(--font-display), ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-shadow:
+    0 2px 0 rgba(244, 184, 96, 0.7),
+    0 5px 16px rgba(61, 23, 71, 0.22);
+}
+
+.brand-mini-text {
+  font-family: var(--font-sans), ui-rounded, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 /* Paper-grain overlay — tiny, almost invisible, adds warmth */

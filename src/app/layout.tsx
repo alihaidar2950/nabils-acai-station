@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Fraunces, Bricolage_Grotesque } from "next/font/google";
+import { Baloo_2, Fredoka } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 
-const fraunces = Fraunces({
+const baloo = Baloo_2({
   subsets: ["latin"],
-  axes: ["SOFT", "opsz"],
+  weight: ["600", "700", "800"],
   display: "swap",
   variable: "--font-display",
 });
 
-const bricolage = Bricolage_Grotesque({
+const fredoka = Fredoka({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-sans",
 });
@@ -42,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${bricolage.variable} h-full antialiased`}
+      className={`${baloo.variable} ${fredoka.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--cream)] text-[var(--acai-deep)]">
         <Navbar />

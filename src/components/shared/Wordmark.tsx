@@ -17,17 +17,17 @@ export function Wordmark({
   const sizes = {
     sm: {
       primary: "text-2xl",
-      secondary: "text-[0.55rem] tracking-[0.32em]",
+      secondary: "text-[0.58rem]",
       mark: "size-10",
     },
     md: {
       primary: "text-3xl",
-      secondary: "text-[0.625rem] tracking-[0.34em]",
+      secondary: "text-[0.66rem]",
       mark: "size-12",
     },
     lg: {
       primary: "text-5xl",
-      secondary: "text-xs tracking-[0.4em]",
+      secondary: "text-sm",
       mark: "size-16",
     },
   }[size];
@@ -53,15 +53,14 @@ export function Wordmark({
       )}
       <span className="inline-flex flex-col items-start">
         <span
-          className={`font-display italic font-medium ${sizes.primary} ${
+          className={`brand-bubble-text ${sizes.primary} ${
             dark ? "text-[var(--acai)]" : "text-[var(--cream)]"
           }`}
-          style={{ letterSpacing: "-0.01em" }}
         >
           Nabil&rsquo;s
         </span>
         <span
-          className={`mt-1 font-semibold uppercase ${sizes.secondary} ${
+          className={`brand-mini-text mt-0.5 uppercase ${sizes.secondary} ${
             dark ? "text-[var(--acai-deep)]" : "text-[var(--lavender)]"
           }`}
         >

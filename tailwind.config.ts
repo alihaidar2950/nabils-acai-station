@@ -39,8 +39,19 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "ui-serif", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: [
+          "var(--font-display)",
+          "ui-rounded",
+          "Arial Rounded MT Bold",
+          "system-ui",
+          "sans-serif",
+        ],
+        sans: [
+          "var(--font-sans)",
+          "ui-rounded",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       backgroundImage: {
         "sunburst-cream":

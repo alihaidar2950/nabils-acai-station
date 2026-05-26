@@ -146,7 +146,8 @@ export function Hero() {
                   <text
                     fill="var(--cream)"
                     style={{
-                      fontFamily: "var(--font-display), serif",
+                      fontFamily:
+                        'var(--font-display), ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif',
                       fontSize: "13px",
                       letterSpacing: "0.32em",
                       textTransform: "uppercase",
