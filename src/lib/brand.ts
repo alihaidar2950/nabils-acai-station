@@ -49,6 +49,31 @@ export const locations = [
   },
 ] as const;
 
+export const press = [
+  {
+    outlet: "PerthNow",
+    outletShort: "PerthNow",
+    headline: "Viral Dubai chocolate puts Ballajura sweet shop on the map",
+    quote:
+      "Chocoholics have been beating a path to Ballajura where an unassuming Lebanese sweet shop has suddenly become a social media hit.",
+    author: "Jay Hanna",
+    date: "Feb 2025",
+    isoDate: "2025-02-09",
+    url: "https://www.perthnow.com.au/food/nabils-acai-station-viral-dubai-chocolate-puts-ballajura-sweet-shop-on-the-map-c-17665925",
+  },
+  {
+    outlet: "The West Australian",
+    outletShort: "The West",
+    headline: "This Perth cafe nails the Dubai chocolate trend",
+    quote:
+      "An unassuming eatery that's serving up what may be the best local version of the viral sweet treat.",
+    author: "April Ooi",
+    date: "Jul 2025",
+    isoDate: "2025-07-30",
+    url: "https://thewest.com.au/lifestyle/food/nabils-acai-station-review-april-ooi-visits-ballajura-shop-for-viral-dubai-chocolate-acai-bowl-c-19437977",
+  },
+] as const;
+
 export const reviews = [
   {
     quote:
