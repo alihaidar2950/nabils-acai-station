@@ -143,3 +143,20 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Hero video — rendered inside a constrained portrait card so the 720p
+   source stays near 1:1 pixel-to-display and looks crisp. Subtle color
+   lift + GPU compositing hide H.264 macroblocks. */
+.hero-video {
+  object-position: 58% center;
+  filter: saturate(1.08) contrast(1.04);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+}
