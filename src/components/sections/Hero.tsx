@@ -37,8 +37,8 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-grain opacity-25 mix-blend-soft-light"
       />
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 md:min-h-[46rem] md:py-24 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-28">
-        <div className="lg:col-span-7">
+      <div className="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 md:min-h-[46rem] md:py-24 lg:grid-cols-12 lg:gap-4 lg:px-10 lg:py-28">
+        <div className="relative lg:col-span-7 lg:pr-0">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.7rem] uppercase tracking-[0.28em] text-[var(--honey)] rise-in rise-in-delay-1">
             <span className="inline-flex items-center gap-1.5">
               <Sparkle className="size-2.5 text-[var(--saffron)]" />
@@ -50,8 +50,8 @@ export function Hero() {
             </span>
           </div>
 
-          <div className="mt-8 max-w-[22rem] sm:max-w-3xl lg:mt-10">
-            <h1 className="font-display text-[clamp(2.85rem,9vw,6rem)] leading-[0.92] tracking-tight rise-in rise-in-delay-2">
+          <div className="mt-8 max-w-[22rem] sm:max-w-3xl lg:mt-10 lg:max-w-[42rem]">
+            <h1 className="font-display text-[clamp(2.85rem,9.5vw,6.5rem)] leading-[0.92] tracking-tight rise-in rise-in-delay-2">
               Acai, crepes &amp;{" "}
               <span className="block italic text-[var(--honey)]">
                 Dubai chocolate<span className="text-[var(--saffron)]">.</span>
@@ -120,12 +120,53 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative lg:col-span-5 rise-in rise-in-delay-3">
-          <div className="relative mx-auto w-full max-w-[28rem] lg:max-w-none">
+        <div className="relative lg:col-span-5 lg:-ml-10 rise-in rise-in-delay-3">
+          <div className="relative mx-auto w-full max-w-[28rem] lg:max-w-none lg:rotate-[-1.75deg]">
             <span
               aria-hidden
               className="absolute -inset-6 rounded-[2.25rem] bg-[radial-gradient(60%_50%_at_50%_40%,rgba(244,184,96,0.35)_0%,transparent_70%)] blur-2xl"
             />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -left-12 -top-10 z-20 hidden size-28 items-center justify-center lg:flex"
+            >
+              <span className="spin-slow absolute inset-0 inline-flex items-center justify-center">
+                <svg
+                  viewBox="0 0 120 120"
+                  className="h-full w-full"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <path
+                      id="hero-sticker-curve"
+                      d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"
+                      fill="none"
+                    />
+                  </defs>
+                  <text
+                    fill="var(--cream)"
+                    style={{
+                      fontFamily: "var(--font-display), serif",
+                      fontSize: "13px",
+                      letterSpacing: "0.32em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    <textPath href="#hero-sticker-curve" startOffset="0">
+                      Open till late · Made for sweet moments ·
+                    </textPath>
+                  </text>
+                </svg>
+              </span>
+              <span className="relative inline-flex size-10 items-center justify-center rounded-full bg-[var(--saffron)] text-[var(--acai-deep)] shadow-[0_8px_30px_-6px_rgba(255,183,64,0.6)] ring-1 ring-[var(--acai-deep)]/15">
+                <svg viewBox="0 0 24 24" className="size-5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </div>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-[var(--acai)] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.85)] ring-1 ring-[var(--cream)]/15">
               <video
                 className="hero-video absolute inset-0 h-full w-full object-cover"
