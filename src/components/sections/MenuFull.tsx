@@ -32,16 +32,16 @@ const menuMedia = [
     alt: "A waffle snack pack tray with strawberries, banana and sauce",
   },
   {
-    src: "/images/menu/fruit-cocktails.jpg",
-    alt: "Nabil's fruit cocktails lined up on the counter",
+    src: "/images/menu/fruit-cocktails-client-enhanced.jpg",
+    alt: "Nabil's fruit cocktail layered with fruit, ashta, cashew and pistachio",
   },
   {
     src: "/images/menu/matcha.jpg",
     alt: "Nabil's matcha drinks beside a pistachio milk chocolate carton",
   },
   {
-    src: "/images/menu/mocktails.jpg",
-    alt: "A lineup of colorful Nabil's mocktails on the counter",
+    src: "/images/menu/mocktails-blue-hawaii-enhanced.jpg",
+    alt: "A blue Nabil's mocktail with ice and lime on the counter",
   },
   {
     src: "/images/menu/iced-lattes.jpg",

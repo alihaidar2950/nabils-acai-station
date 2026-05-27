@@ -133,7 +133,7 @@ export const signatures = [
     price: "$15",
     blurb:
       "Avocado · Mango · Strawberry · Sunset Swirl · The Beast. Blended fresh with ashta, cashew and honey.",
-    image: "/images/enhanced/signature-fruit-cocktails-home.jpg",
+    image: "/images/enhanced/fruit-cocktail-client-enhanced.jpg",
     tag: null,
   },
   {

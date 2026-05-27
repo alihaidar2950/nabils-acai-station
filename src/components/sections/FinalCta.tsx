@@ -58,8 +58,8 @@ export function FinalCta() {
               <div className="absolute left-0 top-0 aspect-[4/5] w-[66%] overflow-hidden rounded-[7rem_7rem_1.5rem_1.5rem] ring-2 ring-[var(--honey)]/40 shadow-[0_30px_60px_-24px_rgba(0,0,0,0.7)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/enhanced/signature-fruit-cocktails-v2.jpg"
-                  alt="Nabil's fruit cocktails lined up on the counter"
+                  src="/images/enhanced/fruit-cocktail-client-enhanced.jpg"
+                  alt="Nabil's fruit cocktail layered with fruit, ashta, cashew and pistachio"
                   className="h-full w-full object-cover"
                 />
               </div>

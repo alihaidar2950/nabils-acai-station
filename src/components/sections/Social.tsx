@@ -7,7 +7,7 @@ const tiles = [
   { src: "/images/enhanced/signature-build-your-own-acai-v2.jpg", alt: "Bueno açaí bowl on a blue backdrop" },
   { src: "/images/enhanced/story-mt-lawley-interior.jpg", alt: "Mt Lawley dessert counter and neon interior" },
   { src: "/images/enhanced/location-ballajura-stall-v2.jpg", alt: "Nabil's Lebanese Sweets counter in Ballajura" },
-  { src: "/images/enhanced/signature-fruit-cocktails-v2.jpg", alt: "Four Nabil's mocktails in clear cans" },
+  { src: "/images/enhanced/blue-hawaii-mocktail-client-enhanced.jpg", alt: "Blue Hawaii mocktail in a branded Nabil's can" },
   { src: "/images/enhanced/signature-matcha-bowl-v2.jpg", alt: "Pistachio açaí bowl" },
 ];
 
