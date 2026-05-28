@@ -49,8 +49,8 @@ export function Heritage() {
             <div className="aspect-[4/5] overflow-hidden rounded-[8rem_8rem_2rem_2rem] ring-1 ring-[var(--acai)]/15">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/enhanced/story-mt-lawley-interior.jpg"
-                alt="Shop interior with a 'Made for Sweet Moments' neon sign over slatted wood"
+                src="/images/enhanced/story-sweet-moments-neon.jpg"
+                alt="A fresh fruit cup on the counter under the 'Made for Sweet Moments' neon sign"
                 className="h-full w-full object-cover"
               />
             </div>

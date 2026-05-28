@@ -120,8 +120,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative lg:col-span-5 lg:-ml-10 rise-in rise-in-delay-3">
-          <div className="relative mx-auto w-full max-w-[28rem] lg:max-w-none lg:rotate-[-1.75deg]">
+        <div className="relative lg:col-span-5 lg:-ml-24 xl:-ml-36 rise-in rise-in-delay-3">
+          <div className="relative mx-auto w-full max-w-[28rem] lg:max-w-none lg:scale-[1.08] xl:scale-[1.14] lg:rotate-[-1.75deg]">
             <span
               aria-hidden
               className="absolute -inset-6 rounded-[2.25rem] bg-[radial-gradient(60%_50%_at_50%_40%,rgba(244,184,96,0.35)_0%,transparent_70%)] blur-2xl"
