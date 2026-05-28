@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { SpecialsComingSoon } from "@/components/sections/SpecialsComingSoon";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Specials",
   description:
-    "Dubai chocolate drops, seasonal flavours and limited-run specials from Nabil's Açaí Station. Coming soon — follow us on Instagram for the freshest updates.",
-};
+    "Dubai chocolate drops, seasonal flavours and limited-run specials from Nabil's Acai Station in Perth. Follow the latest Mount Lawley and Ballajura dessert updates.",
+  path: "/specials",
+  keywords: [
+    "Dubai chocolate Perth",
+    "Dubai chocolate specials Perth",
+    "viral desserts Perth",
+    "Nabil's specials",
+  ],
+});
 
 export default function Page() {
   return <SpecialsComingSoon />;

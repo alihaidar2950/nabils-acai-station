@@ -16,6 +16,24 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Launch SEO & Analytics
+
+Set these environment variables in the deployment platform:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-live-domain.com
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+GOOGLE_SITE_VERIFICATION=google-search-console-token
+```
+
+Optional, if using Google Tag Manager instead of direct GA4:
+
+```bash
+NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
+```
+
+After launch, add the live website URL to both Google Business Profiles, then submit `/sitemap.xml` in Google Search Console.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

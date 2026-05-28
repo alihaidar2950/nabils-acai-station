@@ -24,7 +24,8 @@ export const locations = [
     note: "Dine-in · Takeout · Delivery",
     rating: 5.0,
     reviewCount: 5,
-    mapsUrl: "https://maps.google.com/?q=664+Beaufort+St+Mount+Lawley",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Nabil%27s%20Acai%20Station%20664%20Beaufort%20St%20Mount%20Lawley%20WA%206050",
     hours: [
       ["Mon", "11 AM – 10 PM"],
       ["Tue", "11 AM – 10 PM"],
@@ -44,7 +45,8 @@ export const locations = [
     rating: 4.5,
     reviewCount: null,
     phone: "+61 8 6285 5935",
-    mapsUrl: "https://maps.google.com/?q=Ballajura+City+Shopping+Centre",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Nabil%27s%20Acai%20Station%20Ballajura%20City%20Shopping%20Centre%20WA%206066",
     hours: null,
   },
 ] as const;

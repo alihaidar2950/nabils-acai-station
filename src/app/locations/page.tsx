@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import { LocationsHero, LocationsFull } from "@/components/sections/LocationsFull";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Locations",
   description:
-    "Nabil's Açaí Station has two Perth shops — the Mt Lawley flagship on Beaufort St and the original Lebanese sweets stall inside Ballajura City Shopping Centre. Hours, maps and directions.",
-};
+    "Find Nabil's Acai Station in Mount Lawley and Ballajura. Get Google Maps directions, hours, phone details and location info for both Perth dessert shops.",
+  path: "/locations",
+  keywords: [
+    "Nabil's Acai Station Mount Lawley",
+    "Nabil's Acai Station Ballajura",
+    "dessert cafe Mount Lawley",
+    "acai near Beaufort Street",
+  ],
+});
 
 export default function Page() {
   return (
