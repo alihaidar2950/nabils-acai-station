@@ -20,16 +20,19 @@ export function Wordmark({
       primary: "text-2xl",
       secondary: "text-[0.58rem]",
       mark: "size-10",
+      markPx: 40,
     },
     md: {
       primary: "text-3xl",
       secondary: "text-[0.66rem]",
       mark: "size-12",
+      markPx: 48,
     },
     lg: {
       primary: "text-5xl",
       secondary: "text-sm",
       mark: "size-16",
+      markPx: 64,
     },
   }[size];
 
@@ -47,9 +50,9 @@ export function Wordmark({
             src="/images/enhanced/brand-mascot-medallion.jpg"
             alt=""
             aria-hidden
-            fill
-            sizes="64px"
-            className="object-cover"
+            width={sizes.markPx}
+            height={sizes.markPx}
+            className="h-full w-full object-cover"
           />
         </span>
       )}
