@@ -169,10 +169,6 @@ export function localBusinessJsonLd() {
               addressCountry: "AU",
             },
             hasMap: ballajura.mapsUrl,
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: ballajura.rating,
-            },
           },
         ],
       },
