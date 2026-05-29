@@ -2,60 +2,39 @@ import Link from "next/link";
 import { menu } from "@/lib/brand";
 import { Sparkle, PalmFrond } from "@/components/shared/Ornaments";
 
-const menuMedia = [
-  {
-    src: "/images/menu/acai-build-your-own.jpg",
-    alt: "A build-your-own acai bowl topped with banana, strawberries and a tall drizzle",
+// Only the strongest, enhanced food shots earn an image. Sections not listed
+// here render as clean text cards — this is what kills the old dead space:
+// images are no longer forced one-per-section regardless of list length.
+const featuredImage: Record<string, { src: string; alt: string }> = {
+  "Açaí — Build Your Own": {
+    src: "/images/enhanced/signature-build-your-own-acai-v2.jpg",
+    alt: "A build-your-own açaí bowl topped with banana, strawberries and a tall drizzle",
   },
-  {
-    src: "/images/menu/classic-crepes.jpg",
-    alt: "A tray of crepes drizzled with sauce in front of the Nabil's logo",
+  "Strawberry Cups": {
+    src: "/images/enhanced/signature-dubai-strawberry-cup-v2.jpg",
+    alt: "A Dubai strawberry cup topped with milk chocolate and pistachio",
   },
-  {
-    src: "/images/menu/signature-crepes.jpg",
-    alt: "A close-up tray of Nabil's signature crepes with sauce",
-  },
-  {
-    src: "/images/menu/strawberry-cups.jpg",
-    alt: "A Dubai strawberry cup topped with chocolate and pistachio",
-  },
-  {
-    src: "/images/menu/dubai-chocolate.jpg",
-    alt: "Dubai chocolate acai promo with pistachio topping and strawberries",
-  },
-  {
+  "Brownies": {
     src: "/images/menu/brownies.jpg",
-    alt: "A chocolate dessert bowl with strawberries, banana and brownie-style toppings",
+    alt: "A Dubai chocolate brownie bowl with strawberries and crushed pistachio",
   },
-  {
-    src: "/images/menu/waffle-snack-pack.jpg",
-    alt: "A waffle snack pack tray with strawberries, banana and sauce",
+  "Fruit Cocktails": {
+    src: "/images/enhanced/fruit-cocktail-client-enhanced.jpg",
+    alt: "A Nabil's fruit cocktail layered with fruit, ashta, cashew and honey",
   },
-  {
-    src: "/images/menu/fruit-cocktails-client-enhanced.jpg",
-    alt: "Nabil's fruit cocktail layered with fruit, ashta, cashew and pistachio",
+  "Waffle Snack Pack": {
+    src: "/images/enhanced/signature-waffle-snack-pack-v2.jpg",
+    alt: "A waffle snack pack with strawberries, banana and drizzle",
   },
-  {
-    src: "/images/menu/matcha.jpg",
-    alt: "Nabil's matcha drinks beside a pistachio milk chocolate carton",
+  "Matcha": {
+    src: "/images/enhanced/signature-matcha-bowl-v2.jpg",
+    alt: "A matcha açaí bowl under a slow pour of matcha cream",
   },
-  {
-    src: "/images/menu/mocktails-blue-hawaii-enhanced.jpg",
-    alt: "A blue Nabil's mocktail with ice and lime on the counter",
+  "Mocktails": {
+    src: "/images/enhanced/blue-hawaii-mocktail-client-enhanced.jpg",
+    alt: "A bright blue Nabil's mocktail over ice on the counter",
   },
-  {
-    src: "/images/menu/iced-lattes.jpg",
-    alt: "Two layered iced lattes in branded Nabil's cans",
-  },
-  {
-    src: "/images/menu/milkshakes.jpg",
-    alt: "A blended drink on the counter below the Made for Sweet Moments neon",
-  },
-  {
-    src: "/images/menu/probiotic-splash.jpg",
-    alt: "Two chilled Nabil's probiotic splash cans on a pink wall ledge",
-  },
-] as const;
+};
 
 export function MenuHero() {
   return (
@@ -113,93 +92,98 @@ export function MenuFull() {
         className="pointer-events-none absolute inset-0 bg-sunburst-cream opacity-60"
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28 lg:px-10">
-        <div className="space-y-16 md:space-y-20">
-          {menu.map((section, idx) => (
-            <article
-              key={section.title}
-              id={section.title
-                .normalize("NFD")
-                .replace(/[̀-ͯ]/g, "")
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-|-$/g, "")}
-              className="scroll-mt-24"
-            >
-              <div
-                className={`grid grid-cols-1 gap-7 lg:grid-cols-12 lg:items-start lg:gap-10 ${
-                  idx % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
+      <div className="relative mx-auto max-w-5xl px-6 py-20 md:py-28 lg:px-10">
+        {/* Masonry of self-contained cards: each card sizes to its own
+            content, so short lists no longer leave dead space beside a tall
+            image. break-inside-avoid keeps a section whole within a column. */}
+        <div className="gap-6 md:columns-2 md:gap-7 [column-fill:_balance]">
+          {menu.map((section) => {
+            const media = featuredImage[section.title];
+            return (
+              <article
+                key={section.title}
+                id={section.title
+                  .normalize("NFD")
+                  .replace(/[̀-ͯ]/g, "")
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")
+                  .replace(/^-|-$/g, "")}
+                className="mb-6 break-inside-avoid scroll-mt-24 md:mb-7"
               >
-                <div className="lg:col-span-5">
-                  <div className="relative mx-auto aspect-[4/5] max-w-[30rem] overflow-hidden rounded-[1.5rem] bg-[var(--cream-warm)] ring-1 ring-[var(--acai)]/15 shadow-[0_24px_60px_-36px_rgba(31,11,37,0.45)]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={menuMedia[idx]?.src}
-                      alt={menuMedia[idx]?.alt ?? section.title}
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                    <div
-                      aria-hidden
-                      className="absolute inset-0 ring-1 ring-inset ring-[var(--cream)]/35"
-                    />
-                    <div className="absolute bottom-4 left-4 rounded-full bg-[var(--cream)] px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--acai)] shadow-sm">
-                      {String(idx + 1).padStart(2, "0")}
+                <div className="overflow-hidden rounded-[1.75rem] bg-white ring-1 ring-[var(--acai)]/12 shadow-[0_22px_55px_-38px_rgba(31,11,37,0.55)]">
+                  {media && (
+                    <div className="relative aspect-[4/5] overflow-hidden bg-[var(--cream-warm)]">
+                      {/* Source shots are portrait with tall vertical subjects
+                          (drizzle peaks, cups) — a 4:5 frame matches their
+                          native ratio so nothing gets cropped off. */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={media.src}
+                        alt={media.alt}
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover object-center"
+                      />
+                      <div
+                        aria-hidden
+                        className="absolute inset-0 ring-1 ring-inset ring-[var(--acai-deep)]/10"
+                      />
                     </div>
-                  </div>
-                </div>
+                  )}
 
-                <div className="lg:col-span-7">
-              <header className="flex flex-col gap-3 border-b border-[var(--acai)]/20 pb-5 md:flex-row md:items-end md:justify-between md:gap-8">
-                <div>
-                  <div className="text-[0.7rem] uppercase tracking-[0.3em] text-[var(--acai)]/60">
-                    {String(idx + 1).padStart(2, "0")} · Section
-                  </div>
-                  <h2 className="mt-1.5 font-display text-3xl tracking-tight text-[var(--acai-deep)] md:text-5xl">
-                    {section.title}
-                  </h2>
-                </div>
-                {section.subtitle && (
-                  <p className="max-w-md text-sm italic text-[var(--acai-deep)]/75">
-                    {section.subtitle}
-                  </p>
-                )}
-              </header>
-
-              <ul className="mt-8 grid grid-cols-1 gap-x-12 gap-y-2 md:grid-cols-2">
-                {section.items.map((item) => (
-                  <li
-                    key={item.name}
-                    className="group flex items-baseline gap-3 border-b border-dotted border-[var(--acai)]/20 py-3"
-                  >
-                    <div className="flex-1 min-w-0">
-                      <div className="font-display text-lg text-[var(--acai-deep)]">
-                        {item.name}
+                  <div className="p-6 md:p-7">
+                    <header>
+                      <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-[var(--acai)]/55">
+                        <Sparkle className="size-2.5 text-[var(--saffron)]" />
+                        Menu
                       </div>
-                      {item.note && (
-                        <div className="text-sm text-[var(--acai-deep)]/65">
-                          {item.note}
-                        </div>
+                      <h2 className="mt-2 font-display text-2xl tracking-tight text-[var(--acai-deep)] md:text-3xl">
+                        {section.title}
+                      </h2>
+                      {section.subtitle && (
+                        <p className="mt-2 text-sm italic leading-relaxed text-[var(--acai-deep)]/70">
+                          {section.subtitle}
+                        </p>
                       )}
-                    </div>
-                    {item.price && (
-                      <div className="font-semibold text-sm tracking-wide text-[var(--acai)] shrink-0">
-                        {item.price}
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ul>
+                    </header>
 
-              {section.footnote && (
-                <p className="mt-5 text-xs italic text-[var(--acai-deep)]/70">
-                  {section.footnote}
-                </p>
-              )}
+                    <ul className="mt-5">
+                      {section.items.map((item) => (
+                        <li key={item.name} className="py-2.5">
+                          <div className="flex items-baseline gap-2">
+                            <span className="font-display text-[1.05rem] leading-tight text-[var(--acai-deep)]">
+                              {item.name}
+                            </span>
+                            {item.price && (
+                              <>
+                                <span
+                                  aria-hidden
+                                  className="mb-1 flex-1 border-b border-dotted border-[var(--acai)]/30"
+                                />
+                                <span className="shrink-0 font-semibold text-sm tracking-wide text-[var(--acai)]">
+                                  {item.price}
+                                </span>
+                              </>
+                            )}
+                          </div>
+                          {item.note && (
+                            <p className="mt-0.5 text-[0.85rem] leading-snug text-[var(--acai-deep)]/65">
+                              {item.note}
+                            </p>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {section.footnote && (
+                      <p className="mt-4 border-t border-[var(--acai)]/10 pt-4 text-xs italic leading-relaxed text-[var(--acai-deep)]/70">
+                        {section.footnote}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
 
         <div className="mt-20 flex flex-col items-center gap-4 border-t border-[var(--acai)]/15 pt-12 text-center">
