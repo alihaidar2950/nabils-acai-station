@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { signatures } from "@/lib/brand";
 import { Sparkle } from "@/components/shared/Ornaments";
@@ -51,11 +52,12 @@ export function Signatures() {
               }}
             >
               <div className="relative aspect-[4/5] overflow-hidden bg-[var(--cream-warm)]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
-                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 {item.tag && (
                   <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-[var(--saffron)] px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[var(--acai-deep)]">

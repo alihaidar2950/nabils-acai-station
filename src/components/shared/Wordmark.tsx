@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -42,12 +43,13 @@ export function Wordmark({
               : "ring-[var(--cream)]/25"
           } ${sizes.mark}`}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/enhanced/brand-mascot-medallion.jpg"
             alt=""
             aria-hidden
-            className="h-full w-full object-cover"
+            fill
+            sizes="64px"
+            className="object-cover"
           />
         </span>
       )}

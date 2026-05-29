@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { brand, locations } from "@/lib/brand";
 import { Sparkle, StarRating, CedarLeaf } from "@/components/shared/Ornaments";
 
@@ -39,15 +40,16 @@ export function LocationsFull() {
             >
               <div className={`lg:col-span-6 ${idx === 1 ? "lg:order-2" : ""}`}>
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[10rem_10rem_2rem_2rem] ring-1 ring-[var(--acai)]/15 shadow-[0_30px_60px_-30px_rgba(31,11,37,0.35)]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={
                       idx === 0
                         ? "/images/enhanced/location-mt-lawley-storefront-v2.jpg"
                         : "/images/enhanced/location-ballajura-stall-v2.jpg"
                     }
                     alt={`${loc.name} storefront`}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                 </div>
               </div>

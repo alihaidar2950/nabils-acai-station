@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { brand } from "@/lib/brand";
 import { Sparkle } from "@/components/shared/Ornaments";
 import { BiLogoInstagram, BiLogoTiktok } from "react-icons/bi";
@@ -76,11 +77,12 @@ export function Social() {
                       : "translateY(-6px)",
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={tile.src}
                 alt={tile.alt}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fill
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <span
                 aria-hidden
