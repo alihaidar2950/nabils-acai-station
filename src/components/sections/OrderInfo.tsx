@@ -1,11 +1,21 @@
 import { Sparkle } from "@/components/shared/Ornaments";
 import { brand, locations } from "@/lib/brand";
+import { SiDoordash, SiUbereats } from "react-icons/si";
 
 const delivery = [
   {
     name: "Uber Eats",
     url: brand.orderUrl,
     note: "Mt Lawley & Ballajura — usually 25–40 min.",
+    logo: SiUbereats,
+    logoClassName: "text-[#06C167]",
+  },
+  {
+    name: "DoorDash",
+    url: brand.doordashUrl,
+    note: "Ballajura delivery through DoorDash.",
+    logo: SiDoordash,
+    logoClassName: "text-[#FF3008]",
   },
 ];
 
@@ -25,8 +35,8 @@ export function OrderHero() {
           Delivery or <span className="italic">pick&nbsp;up</span>.
         </h1>
         <p className="mt-6 mx-auto max-w-xl text-base leading-relaxed text-[var(--acai-deep)]/75 md:text-lg">
-          Tap order for delivery, or walk in and grab it warm. Both shops in
-          Perth take walk-ins all day.
+          Tap Uber Eats or DoorDash for delivery, or walk in and grab it warm.
+          Both shops in Perth take walk-ins all day.
         </p>
       </div>
     </section>
@@ -47,27 +57,48 @@ export function OrderInfo() {
               Get it to your door
             </h2>
             <ul className="mt-2 space-y-4">
-              {delivery.map((d) => (
-                <li
-                  key={d.name}
-                  className="flex flex-col gap-2 rounded-2xl bg-[var(--cream)] p-5 ring-1 ring-[var(--acai)]/10"
-                >
-                  <a
-                    href={d.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-between gap-3 font-semibold text-[var(--acai-deep)] hover:text-[var(--acai)]"
+              {delivery.map((d) => {
+                const Logo = d.logo;
+
+                return (
+                  <li
+                    key={d.name}
+                    className="rounded-2xl bg-[var(--cream)] p-5 ring-1 ring-[var(--acai)]/10"
                   >
-                    <span>{d.name}</span>
-                    <span aria-hidden className="text-[var(--acai)]">→</span>
-                  </a>
-                  <span className="text-sm text-[var(--acai-deep)]/70">{d.note}</span>
-                </li>
-              ))}
+                    <a
+                      href={d.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-4 text-[var(--acai-deep)] hover:text-[var(--acai)]"
+                    >
+                      <span className="flex min-w-0 items-center gap-4">
+                        <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_10px_24px_-18px_rgba(31,11,37,0.45)] ring-1 ring-[var(--acai)]/10">
+                          <Logo
+                            aria-hidden
+                            className={`size-7 ${d.logoClassName}`}
+                          />
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block font-semibold">{d.name}</span>
+                          <span className="mt-1 block text-sm text-[var(--acai-deep)]/70">
+                            {d.note}
+                          </span>
+                        </span>
+                      </span>
+                      <span
+                        aria-hidden
+                        className="shrink-0 text-[var(--acai)] transition-transform group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
             <p className="text-xs italic text-[var(--acai-deep)]/60">
-              More delivery partners coming. Don&rsquo;t see yours? Call the
-              shop and we&rsquo;ll sort it.
+              Availability can vary by location and time. Call the shop if you
+              need a hand with pickup.
             </p>
           </article>
 

@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Order",
   description:
-    "Order Nabil's Acai Station for pickup or delivery in Perth. Get acai bowls, Dubai chocolate, crepes and desserts from Mount Lawley or Ballajura.",
+    "Order Nabil's Acai Station for pickup or delivery in Perth through Uber Eats or DoorDash. Get acai bowls, Dubai chocolate, crepes and desserts from Mount Lawley or Ballajura.",
   path: "/order",
   keywords: [
     "order acai Perth",

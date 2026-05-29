@@ -5,6 +5,8 @@ export const brand = {
   phoneHref: "tel:+61862855935",
   orderUrl:
     "https://www.ubereats.com/au/store/nabils-acai-station-nabils-lebanese-sweets-pty-ltd/B5xIbcLwW8ORip2Jj-A1sg",
+  doordashUrl:
+    "https://www.doordash.com/store/nabil%E2%80%99s-acai-station-ballajura-34876453/72960151/",
   instagram: {
     handle: "@nabilsacaistation",
     url: "https://instagram.com/nabilsacaistation",
