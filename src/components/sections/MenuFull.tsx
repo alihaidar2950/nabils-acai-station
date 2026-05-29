@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { menu } from "@/lib/brand";
 import { Sparkle, PalmFrond } from "@/components/shared/Ornaments";
@@ -25,10 +26,6 @@ const featuredImage: Record<string, { src: string; alt: string }> = {
   "Waffle Snack Pack": {
     src: "/images/enhanced/signature-waffle-snack-pack-v2.jpg",
     alt: "A waffle snack pack with strawberries, banana and drizzle",
-  },
-  "Matcha": {
-    src: "/images/enhanced/signature-matcha-bowl-v2.jpg",
-    alt: "A matcha açaí bowl under a slow pour of matcha cream",
   },
   "Mocktails": {
     src: "/images/enhanced/blue-hawaii-mocktail-client-enhanced.jpg",
@@ -116,12 +113,12 @@ export function MenuFull() {
                       {/* Source shots are portrait with tall vertical subjects
                           (drizzle peaks, cups) — a 4:5 frame matches their
                           native ratio so nothing gets cropped off. */}
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={media.src}
                         alt={media.alt}
-                        loading="lazy"
-                        className="absolute inset-0 h-full w-full object-cover object-center"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 512px"
+                        className="object-cover object-center"
                       />
                       <div
                         aria-hidden
